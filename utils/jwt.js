@@ -20,6 +20,7 @@ const jwtAuthMiddleware = async (req, res, next) => {
 
 // Function to generate JWT token
 const generateToken = (userData) => {
+  console.log(userData);  
   return jwt.sign(userData, process.env.JWT_SECRET, { expiresIn: "3d" });
 };
 
