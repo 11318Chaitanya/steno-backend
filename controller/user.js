@@ -78,6 +78,8 @@ const loginUser = asyncHandler(async (req, res) => {
       httpOnly: true,
     };
 
+    console.log(token);
+
     res
       .status(201)
       .cookie("token", token, options)
