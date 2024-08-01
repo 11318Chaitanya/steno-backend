@@ -96,7 +96,7 @@ const getUser = asyncHandler(async (req, res) => {
     res.status(200).json({ success: true, user });
   } catch (err) {
     console.log(err);
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ error: err});
   }
 });
 
